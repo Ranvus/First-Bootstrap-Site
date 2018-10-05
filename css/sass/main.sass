@@ -1,0 +1,449 @@
+@import "node_modules/bourbon/core/bourbon"
+
+$color: #ff7878
+
+body
+	font-family: "Lato", sans-serif
+	font-weight: 300
+	font-size: 16px
+	color: #555
+	position: relative
+	line-height: 1.42857
+	-webkit-font-smoothing: antialised
+	margin-top: 70px
+
+*
+	margin: 0
+	padding: 0
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+body input:required:valid,
+body textarea:required:valid
+	color: green
+
+// .wraper
+// 	width: 100vw
+// 	height: 100vh
+// 	overflow: hidden
+
+.hidden
+	display: none
+
+// Form
+
+.mfp-move-from-top 
+	/* start state */
+	.mfp-with-anim
+		opacity: 0
+		transition: all 0.2s
+		transform: translateY(-100px)
+	&.mfp-bg 
+		opacity: 0
+		transition: all 0.2s
+	/* animate in */
+	&.mfp-ready 
+		.mfp-with-anim 
+			opacity: 1
+			transform: translateY(0)
+		&.mfp-bg 
+			opacity: 0.8
+	/* animate out */
+	&.mfp-removing 
+		.mfp-with-anim 
+			transform: translateY(-50px)
+			opacity: 0
+		&.mfp-bg 
+			opacity: 0
+
+form
+	background-color: #fff
+	min-width: 320px
+	width: 600px
+	height: 750px
+	margin: auto
+	position: relative
+	h4
+		width: 100%
+		background-color: #bdbdbd
+		padding: 15px
+	p
+		text-align: center
+		margin-bottom: 30px
+	.form_body
+		padding: 15px 15px
+		label
+			color: #999
+			font-weight: 700
+		input
+			width: 100%
+			margin-top: 10px
+			margin-bottom: 10px
+			font-size: 14px
+			padding: 10px 12px
+		textarea
+			margin-top: 10px
+			padding: 10px 12px
+			width: 568px
+			height: 122px
+			resize: none
+		.btn
+			text-align: center
+			margin-top: 10px
+			button
+				background-color: #d9534f
+				color: #fff
+				padding: 10px 30px
+				border: 0
+				border-radius: 3px
+				font-size: 14px
+				font-weight: 400
+				transition: .4s
+			button:hover
+				background-color: #b55959
+
+// Tags
+
+button:visited, 
+button:focus, 
+button:active, 
+button:hover,
+.btn:visited, 
+.btn:focus, 
+.btn:active, 
+.btn:hover,
+input:visited, 
+input:focus, 
+input:active, 
+input:hover
+	outline: 0 none !important
+
+a:visited, 
+a:focus, 
+a:active,
+a:hover
+	text-decoration: none
+
+h4
+	font-size: 18px
+
+p
+	line-height: 28px
+
+// Main Part
+
+.fixed 
+	padding-right: 0
+	padding-left: 0
+	top: 0
+	position: fixed
+	right: 0
+	left: 0
+	z-index: 1030
+
+.title
+	font-family: "Raleway"
+	color: #333
+	font-weight: 700
+
+.touch-menu
+	display: none
+	float: right
+	margin-top: 8px
+	i
+		font-size: 30px
+
+.menu
+	background-color: #2d2d2d
+	min-height: 50px
+	font-weight: 800
+	padding-top: 15px
+	padding-bottom: 15px
+	.logo
+		color: #999
+		font-size: 22px
+		font-weight: bold
+		i
+			color: $color
+			padding-top: 15px
+	ul
+		float: right
+		margin: 0
+		li
+			float: left
+			list-style-type: none
+			padding: 15px
+			a
+				font-size: 14px
+				font-weight: bold
+				color: #9d9d9d
+				transition: .5s
+			a:hover
+				color: #fff
+		.active 
+			background-color: $color
+			a
+				color: #fff
+
+// Index
+
+header
+	background: url(../img/header-bg.jpg) center no-repeat
+	background-size: cover
+	height: 500px
+	h1, h2
+		text-align: center
+	h1
+		color: #fff
+		font-size: 70px
+		font-weight: 300
+		margin-top: 100px
+		margin-bottom: 0
+		letter-spacing: 3px
+	h2
+		font-size: 40px
+		font-weight: 700
+		color: #fff
+		letter-spacing: 2px
+		text-transform: uppercase
+
+.advantages
+	padding-top: 75px
+	text-align: center
+	height: 330px
+	.design i, .bootstrap i, .support i
+		color: $color
+		font-size: 30px
+	.design h4, .bootstrap h4, .support h4
+		font-weight: 700
+		margin-top: 10px
+		color: #111
+	.design p, .bootstrap p, .support p
+		margin-top: 10px
+
+.latest_works
+	text-align: center
+	background-color: #e0e0e0
+	padding-top: 70px
+	font-weight: 700
+	height: 627px
+	.picture
+		margin-top: 40px
+		transition: .5s
+	.picture:hover
+		transform: rotate(-7deg)
+
+.first_class
+	text-align: center
+	h4
+		margin-top: 100px
+	p
+		margin-top: 20px
+	img
+		display: block
+		max-width: 100%
+		height: auto
+		margin-top: 120px
+
+.awesome_clients
+	text-align: center
+	background-color: #ebebeb
+	h4
+		margin-top: 100px
+	img:first-child
+		margin-left: 95px
+
+.learn, .things, .work
+	text-align: center
+	background-color: #3498db
+	color: #fff
+	padding-top: 35px
+	padding-bottom: 35px
+	height: 162px
+	.title
+		color: #fff
+	.title_p
+		font-family: "Lato Light", sans-serif
+		font-size: 16px
+		margin-top: 10px
+
+// About
+
+.authors
+	text-align: center
+	height: 462px
+	img
+		border-radius: 50%
+		width: 110px
+		height: 110px
+		margin-top: 80px
+	h4
+		color: #333
+		margin-top: 10px
+	.title_p
+		margin-top: 10px
+	p
+		margin-top: 25px
+	a
+		color: #f85c37
+		transition: .5s
+	a:hover
+		color: #999
+
+.skills
+	background-color: #e0e0e0
+	text-align: center
+	height: 501px
+	.title
+		margin-top: 70px
+	canvas
+		margin-top: 50px
+		display: inline-block !important
+	small
+		font-size: 85%
+	.skills_title
+		margin-top: 10px
+	.text
+		margin-top: 30px
+
+// Services
+
+.services
+	text-align: center
+	height: 543px
+	i
+		color: $color
+		font-size: 30px
+		margin-top: 100px
+	h4
+		margin-top: 10px
+	p
+		margin-top: 10px
+
+.plans
+	background-color: #e0e0e0
+	text-align: center
+	height: 880px
+	h4
+		margin-top: 80px
+	.price_block
+		width: 360px
+		height: 628px
+		background-color: #eee
+		margin-top: 30px
+		.price_top
+			width: 360px
+			height: 259px
+			background-color: #333
+			.offer
+				width: 360px
+				height: 27px
+				background-color: #1abc9c
+				font-size: 15px
+				color: #fff
+				font-weight: 700
+			span
+				color: #fff
+				font-weight: 700
+				display: inline-block
+			.span_title
+				font-size: 25px
+				letter-spacing: 8px
+				width: 360px
+				margin-top: 13px
+			.span_title:nth-child(0), .span_title:nth-child(1)
+				margin-top: 40px
+			.span_price
+				span
+					font-size: 108px
+				sup
+					font-size: 24px
+				small
+					font-size: 18px
+		ul
+			li
+				border-bottom: solid 1px #e1e1e1
+				list-style-type: none
+				padding-top: 20px
+				padding-bottom: 20px
+				b
+					font-weight: 700
+		button
+			width: 360px
+			height: 55px
+			background-color: #1abc9c
+			border: none
+			font-size: 18px
+			font-weight: bold
+			transition: .4s
+			a
+				color: #fff
+		button:hover
+			background-color: $color
+
+// Works
+
+.clients
+	background-color: #fff
+	hr
+		height: 1px
+		background-color: #ccc
+	img
+		margin-top: 70px
+	.cl_text
+		text-align: left
+		font-size: 16px
+		font-weight: 300
+		h4
+			margin-top: 75px
+		.point
+			margin-top: 5px
+			i
+				font-size: 12px
+				color: $color
+
+// Main Part
+	
+.brand
+	text-align: center
+	background-color: $color
+	h4, p
+		color: #fff
+	h4
+		margin-top: 40px
+	p
+		margin-top: 10px
+		margin-bottom: 40px
+		word-wrap: break-word
+
+.soc
+	background-color: #2d2d2d
+	text-align: center
+	padding-top: 30px
+	padding-bottom: 30px
+	i
+		font-size: 30px
+		color: #fff
+		padding: 20px
+		color: #bdbdbd
+		transition: .5s
+	i:hover
+		color: #f85c37
+
+.copyright
+	padding-top: 20px
+	padding-bottom: 20px
+	background-color: #222
+	text-align: center
+	p
+		color: #fff
+	p:last-child
+		margin-top: 10px
+		color: #999
+		a
+			color: #f85c37
+			word-wrap: break-word
+			transition: 1s
+		a:hover
+			color: #999

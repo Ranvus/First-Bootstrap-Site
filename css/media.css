@@ -1,0 +1,318 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	/* Index */
+	.advantages .design p, .advantages .bootstrap p, .advantages .support p{
+		font-size: 15px;
+	}
+
+	.awesome_clients img:first-child {
+    margin-left: 55px;
+	}
+
+	/* About */
+	.authors p{
+		font-size: 14px;
+	}
+
+	.skills{
+		height: 850px;
+	}
+
+	.skills .text{
+		font-size: 15px;
+	}
+
+	/* Services */
+	.services{
+		height: 830px;
+	}
+
+	.plans .price_block{
+		width: 280px;
+		height: 628px;
+	}
+
+	.plans .price_block button{
+		width: 280px;
+		height: 55px;
+	}
+
+	.plans .price_block .price_top{
+		width: 280px;
+		height: 259px;
+	}
+
+	.plans .price_block .price_top .offer{
+		width: 280px;
+		height: 27px;
+	}
+
+	.plans .price_block .price_top .span_title{
+		width: 280px;
+	}
+
+	.plans .price_block .price_top .span_price span{
+		font-size: 100px;
+	}
+
+	.plans .price_block .price_top .span_price sup{
+		font-size: 20px;
+	}
+
+	.plans .price_block .price_top .span_price small{
+		font-size: 16px;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+	/* Index */
+	.advantages{
+		height: 730px;
+	}
+
+	.advantages .bootstrap, .advantages .support{
+		margin-top: 20px;
+	}
+
+	.awesome_clients img{
+		width: 150px;
+		height: 180px;
+	}
+
+	.awesome_clients img:first-child{
+		margin-left: 40px;
+	}
+
+	.latest_works{
+		height: 1550px;
+	}
+
+	/* About */
+	.authors{
+		height: 882px;
+	}
+
+	.skills{
+		height: 1600px;
+	}
+
+	/* Services */
+	.services{
+		height: 1330px;
+	}
+
+	.services i{
+		margin-top: 50px;
+	}
+
+	.plans{
+		height: 2200px;
+	}
+
+	.plans .price_block{
+		margin: auto;
+		margin-top: 50px;
+	}
+
+	/* Main Part */
+		.brand p{
+		font-size: 15px;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	/* Main Part */
+	.menu{
+		height: 82px;
+	}
+
+	.nav{display: none;}
+
+	.touch-menu{
+		display: block;
+		padding-right: 20px;
+	}
+
+	.menu .col-md-7{
+		padding: 0;
+	}
+
+	.nav{
+		margin-top: 5px;
+		width: 100.5%;
+		height: 380px;
+		background-color: #2d2d2d;
+		z-index: 2;
+		margin-left: 10px;
+	}
+
+	.menu ul li{
+		float: none;
+	}
+
+	.menu ul li{
+		float: none;
+		margin-top: 20px;
+		list-style-type: none;
+		text-align: center;
+	}
+
+	.menu li:last-child{
+		margin-top: 20px;
+	}
+
+	.menu ul li a{
+		display: block;
+	}
+
+	/* Index */
+	header{
+		height: 400px;
+	}
+	
+	header h1{
+		font-size: 50px;
+	}
+
+	header h2{
+		font-size: 30px;
+	}
+
+	.awesome_clients img{
+		width: 170px;
+		height: 200px;
+	}
+
+	.awesome_clients img:first-child{
+		margin-left: 0;
+	}
+
+	/* About */ 
+	.authors{
+		height: 1702px;
+	}
+
+	/* Works */
+	.clients{
+		text-align: center;
+	}
+
+	.clients .cl_text{
+		text-align: center;
+	}
+
+	/* Form */
+	#form{
+		width: 450px;
+		height: 750px;
+	}
+
+	#form .form_body textarea{
+		width: 418px;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	/* Index */
+	header{
+		height: 250px;
+	}
+
+	header h1{
+		font-size: 40px;
+		margin-top: 40px;
+	}
+
+	header h2{
+		font-size: 20px;
+	}
+
+	/* Form */
+	#form{
+		width: 280px;
+		height: 780px;
+	}
+
+	#form .form_body textarea{
+		width: 268px;
+	}
+}
+
+@media only screen and (max-width : 368px) {
+	/* Index */
+	header h1{
+		font-size: 35px;
+		margin-top: 40px;
+	}
+
+	header h2{
+		font-size: 18px;
+	}
+}
+
+@media only screen and (max-width : 358px) {
+	/* Index */
+	.advantages{
+		height: 800px;
+	}
+}
+
+@media only screen and (max-width : 351px) {
+	/* Services */
+	.services{
+		height: 1500px;
+	}
+}
+
+@media only screen and (max-width : 344px) {
+	/* Services */
+	.services{
+		height: 1650px;
+	}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 340px) {
+	/* Form */
+	#form{
+		width: 200px;
+		height: 780px;
+	}
+
+	#form .form_body textarea{
+		width: 188px;
+	}
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
