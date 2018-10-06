@@ -5,6 +5,38 @@ $(document).ready(function() {
 		mainClass: 'mfp-move-from-top'
 	});
 
+	var magnificPopup = $.magnificPopup.instance; 
+	// save instance in magnificPopup variable
+
+	//Аякс отправка форм
+	//Документация: http://api.jquery.com/jquery.ajax/
+	$("#form").submit(function() { //Change
+		$.ajax({
+			type: "GET",
+			url: "../mail.php", //Change
+			data: $(this).serialize(),
+			success: function(){
+				alert('Thanks for request.');
+				magnificPopup.close(); 
+			}
+		})
+		return false;
+	});
+
+	//Цели для Яндекс.Метрики и Google Analytics
+	$(".count_element").on("click", (function() {
+		ga("send", "event", "goal", "goal");
+		yaCounterXXXXXXXX.reachGoal("goal");
+		return true;
+	}));
+
+	//SVG Fallback
+	if(!Modernizr.svg) {
+		$("img[src*='svg']").attr("src", function() {
+			return $(this).attr("src").replace(".svg", ".png");
+		});
+	};
+
 	var touch = $('.touch-menu');
 	var menu = $('.nav');
 	
@@ -127,36 +159,5 @@ $(document).ready(function() {
 	    		easing: 'easeOutBounce'
 	    	}
 	    }
-	});
-
-	//Цели для Яндекс.Метрики и Google Analytics
-	$(".count_element").on("click", (function() {
-		ga("send", "event", "goal", "goal");
-		yaCounterXXXXXXXX.reachGoal("goal");
-		return true;
-	}));
-
-	//SVG Fallback
-	if(!Modernizr.svg) {
-		$("img[src*='svg']").attr("src", function() {
-			return $(this).attr("src").replace(".svg", ".png");
-		});
-	};
-
-	//Аякс отправка форм
-	//Документация: http://api.jquery.com/jquery.ajax/
-	$("#form").submit(function(e) {
-		e.preventDefault;
-		$.ajax({
-			type: "POST",
-			url: "mail.php",
-			data: $(this).serialize()
-		}).done(function() {
-			alert("Спасибо за заявку!");
-			setTimeout(function() {
-				$.fancybox.close();
-			}, 1000);
-		});
-	});
-	
+	});	
 });
